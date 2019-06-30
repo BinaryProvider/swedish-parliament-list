@@ -1,0 +1,79 @@
+@import 'variables';
+@import '~open-sans-fonts/open-sans';
+@import '~@angular/material/theming';
+
+$md-primary: (
+  50: lighten($primary, 90%),
+  100: lighten($primary, 80%),
+  200: lighten($primary, 70%),
+  300: lighten($primary, 60%),
+  400: lighten($primary, 50%),
+  500: lighten($primary, 40%),
+  600: lighten($primary, 30%),
+  700: lighten($primary, 20%),
+  800: lighten($primary, 10%),
+  900: $primary,
+  A100: saturate($primary, 10%),
+  A200: saturate($primary, 20%),
+  A400: saturate($primary, 30%),
+  A700: saturate($primary, 40%),
+  contrast: (
+    50: $black,
+    100: $black,
+    200: $black,
+    300: $white,
+    400: $white,
+    500: $white,
+    600: $white,
+    700: $white,
+    800: $white,
+    900: $white,
+    A100: $black,
+    A200: $black,
+    A400: $white,
+    A700: $white
+  )
+);
+
+$md-secondary: (
+  50: lighten($secondary, 40%),
+  100: lighten($secondary, 30%),
+  200: lighten($secondary, 20%),
+  300: lighten($secondary, 10%),
+  400: $secondary,
+  500: darken($secondary, 10%),
+  600: darken($secondary, 20%),
+  700: darken($secondary, 30%),
+  800: darken($secondary, 40%),
+  900: darken($secondary, 50%),
+  A100: lighten($secondary, 50%),
+  A200: lighten($secondary, 40%),
+  A400: lighten($secondary, 30%),
+  A700: lighten($secondary, 20%),
+  contrast: (
+    50: $black,
+    100: $black,
+    200: $black,
+    300: $black,
+    400: $black,
+    500: $black,
+    600: $black,
+    700: $black,
+    800: $black,
+    900: $black,
+    A100: $black,
+    A200: $black,
+    A400: $black,
+    A700: $black
+  )
+);
+
+$mat-theme: mat-light-theme($md-primary, $md-secondary);
+
+@include angular-material-theme($mat-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: $font-family-sans-serif
+);
+
+@include mat-core($custom-typography);

@@ -1,0 +1,19 @@
+<div class="h-100 d-flex flex-column">
+  <div class="p-4 d-inline d-md-flex text-center text-md-left">
+    <img
+      alt="Sveriges Riksdag"
+      class="logo mb-5 mb-md-2 mr-0 mr-md-5 flex-shrink-1"
+      src="assets/images/riksdagen-logo.svg"
+    />
+    <app-party-filter
+      (partyFilterChange)="partyFilterChange($event)"
+      class="w-100"
+    ></app-party-filter>
+  </div>
+  <app-parliament-member-list
+    class="d-flex flex-column flex-grow-1 flex-shrink-1"
+    [partyFilter]="partyFilter$ | async"
+    [parliamentMembers]="parliamentMembers$ | async"
+    (rowClick)="showMemberDetails($event)"
+  ></app-parliament-member-list>
+</div>

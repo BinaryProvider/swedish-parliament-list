@@ -1,0 +1,105 @@
+@import '../../../../variables';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+:host ::ng-deep {
+  .mat-sort-header-arrow {
+    color: $white !important;
+  }
+  button:focus {
+    outline: none;
+  }
+}
+
+.mat-row {
+  cursor: pointer;
+  &:nth-child(odd) {
+    background-color: $gray-100;
+  }
+  &:hover {
+    background-color: rgba($primary, 0.1);
+  }
+}
+
+.mat-header-cell {
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: $primary;
+  color: $white;
+}
+
+.mat-sort-header-button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.mat-cell {
+  padding-right: 1rem;
+}
+
+.mat-column-fodd_ar {
+  flex: 0 0 4rem;
+}
+
+.party-logo {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.no-party-logo {
+  font-size: 1.75rem;
+  margin-right: 0.5rem;
+  color: $gray-600;
+}
+
+.skeleton-line {
+  position: relative;
+  background-color: $gray-200;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  width: 100%;
+  overflow: hidden;
+  &:after {
+    content: ' ';
+    display: block;
+    animation: shine 1s linear infinite forwards;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(
+      to right,
+      $gray-200 0%,
+      $gray-100 20%,
+      $gray-200 40%,
+      $gray-200 100%
+    );
+    height: 0.75rem;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .party-name,
+  .mat-column-status,
+  .mat-column-valkrets {
+    display: none;
+  }
+
+  .mat-column-parti {
+    justify-content: center;
+  }
+
+  .party-logo,
+  .no-party-logo {
+    margin-right: 0;
+  }
+}

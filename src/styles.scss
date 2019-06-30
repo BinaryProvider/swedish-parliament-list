@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'theme';
+@import '~bootstrap/scss/bootstrap';
+
+html {
+  font-size: 14px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+  height: 100%;
+  flex-grow: 1;
+}

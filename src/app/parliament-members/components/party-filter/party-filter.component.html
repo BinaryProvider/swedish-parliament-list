@@ -1,0 +1,29 @@
+<div
+  class="ml-0 ml-md-3 flex-grow-1 d-flex justify-content-start justify-content-md-end flex-wrap flex-lg-nowrap"
+>
+  <div
+    class="party-filter all-parties d-flex flex-column justify-content-center p-2 ml-0 ml-lg-3 mr-2 mr-lg-0 mb-2 mb-lg-0"
+    [ngClass]="{ active: isAllPartiesSelected() }"
+    (click)="toggleAll()"
+    title="Alla ledamöter"
+  >
+    <fa-icon [icon]="['fas', 'users']"></fa-icon>
+  </div>
+  <div
+    class="party-filter d-flex flex-column justify-content-center p-2 ml-0 ml-lg-3 mr-2 mr-lg-0 mb-2 mb-lg-0"
+    [ngClass]="{
+      active: isPartySelected(party),
+      'no-party': !isValidParty(party)
+    }"
+    [style.background]="party | partyColor"
+    [attr.title]="party | partyName"
+    (click)="toggle([party])"
+    *ngFor="let party of allParties"
+  >
+    <img *ngIf="isValidParty(party)" [attr.src]="party | partyLogo" />
+    <fa-icon
+      *ngIf="!isValidParty(party)"
+      [icon]="['fas', 'user-circle']"
+    ></fa-icon>
+  </div>
+</div>

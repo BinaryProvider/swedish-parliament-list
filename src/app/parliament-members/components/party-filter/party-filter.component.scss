@@ -1,0 +1,43 @@
+@import '../../../../variables';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.party-filter {
+  height: 4rem;
+  width: 3.75rem;
+  cursor: pointer;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.6;
+  }
+  &.active {
+    opacity: 1;
+  }
+  img,
+  fa-icon {
+    height: 90%;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 0.4rem;
+  }
+}
+
+.all-parties,
+.no-party {
+  background-color: $primary;
+  color: $primary;
+  fa-icon {
+    padding-left: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+.no-party {
+  background-color: $gray-600 !important;
+  color: $gray-600;
+  fa-icon {
+    font-size: 1.75rem;
+  }
+}
