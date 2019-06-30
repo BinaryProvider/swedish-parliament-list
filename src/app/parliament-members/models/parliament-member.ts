@@ -1,6 +1,7 @@
 import { PartyEnum } from './party-enum';
 
 export interface ParliamentMember {
+  sourceid: number;
   tilltalsnamn: string;
   efternamn: string;
   sorteringsnamn: string;

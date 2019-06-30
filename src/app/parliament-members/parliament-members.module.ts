@@ -7,16 +7,18 @@ import { ParliamentMemberListComponent } from './components/parliament-member-li
 import { PartyLogoPipe } from './pipes/party-logo.pipe';
 import { PartyColorPipe } from './pipes/party-color.pipe';
 import { PartyFilterComponent } from './components/party-filter/party-filter.component';
+import { MemberDetailsComponent } from './components/member-details/member-details.component';
 
 @NgModule({
   imports: [SharedModule, ParliamentMembersRoutingModule],
   declarations: [
+    PartyNamePipe,
+    PartyLogoPipe,
+    PartyColorPipe,
     ParliamentMembersComponent,
     ParliamentMemberListComponent,
     PartyFilterComponent,
-    PartyNamePipe,
-    PartyLogoPipe,
-    PartyColorPipe
+    MemberDetailsComponent
   ]
 })
 export class ParliamentMembersModule {}
