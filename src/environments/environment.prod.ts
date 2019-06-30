@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://data.riksdagen.se'
+  apiUrl: 'https://data.riksdagen.se'
 };
