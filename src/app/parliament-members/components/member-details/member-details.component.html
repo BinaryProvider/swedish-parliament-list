@@ -24,7 +24,7 @@
 <div class="modal-body p-0 border-bottom-0 d-flex flex-row">
   <img
     class="member-image d-none d-sm-inline flex-shrink-0"
-    [attr.src]="member?.bild_url_192"
+    [attr.src]="member?.bild_url_192.replace('http://', 'https://')"
   />
   <div class="member-details w-100 d-flex flex-column py-4 px-0">
     <div class="d-flex align-items-center px-4 py-2">
