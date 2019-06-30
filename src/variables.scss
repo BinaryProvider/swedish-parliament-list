@@ -20,3 +20,11 @@ $success: $green !default;
 $info: $cyan !default;
 $warning: $bright-yellow !default;
 $danger: $red !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 900px,
+  lg: 1000px,
+  xl: 1280px
+);
